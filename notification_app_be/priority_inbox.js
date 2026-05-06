@@ -95,23 +95,7 @@ async function main() {
     // Get Top 10
     const top10 = unreadNotifications.slice(0, 10);
     
-    console.log("\n" + "=".repeat(80));
-    console.log("PRIORITY INBOX (TOP 10)".padStart(50));
-    console.log("=".repeat(80));
-    console.log("TYPE".padEnd(12) + " | " + "TIMESTAMP".padEnd(20) + " | MESSAGE");
-    console.log("-".repeat(80));
-    
-    top10.forEach(n => {
-        const type = (n.Type || "Unknown").padEnd(12);
-        const timestamp = (n.Timestamp || "Unknown").padEnd(20);
-        let message = n.Message || "";
-        if (message.length > 40) {
-            message = message.substring(0, 37) + "...";
-        }
-        console.log(`${type} | ${timestamp} | ${message}`);
-    });
-    
-    console.log("=".repeat(80) + "\n");
+    console.log(JSON.stringify(top10, null, 2));
 }
 
 main();

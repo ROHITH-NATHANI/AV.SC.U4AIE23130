@@ -138,24 +138,19 @@ async function main() {
     // Calculate daily mechanic-hour budget
     const totalBudget = depots.reduce((sum, d) => sum + (d.MechanicHours || 0), 0);
     
-    console.log(`Total available mechanic-hours (budget): ${totalBudget}`);
-    console.log(`Total vehicles requesting maintenance: ${vehicles.length}\n`);
-    
     // Solve Knapsack
     const { selectedTasks, totalImpact, totalDuration } = knapsack(totalBudget, vehicles);
+
+    const result = {
+        totalBudget: totalBudget,
+        totalVehicles: vehicles.length,
+        selectedTasksCount: selectedTasks.length,
+        usedMechanicHours: totalDuration,
+        totalOperationalImpactScore: totalImpact,
+        selectedTaskIDs: selectedTasks
+    };
     
-    console.log("=".repeat(80));
-    console.log("VEHICLE MAINTENANCE SCHEDULER - OPTIMAL SUBSET".padStart(60));
-    console.log("=".repeat(80));
-    console.log(`Total Selected Tasks: ${selectedTasks.length}`);
-    console.log(`Total Used Mechanic-Hours: ${totalDuration} / ${totalBudget}`);
-    console.log(`Total Operational Impact Score: ${totalImpact}`);
-    console.log("-".repeat(80));
-    console.log("Selected Task IDs:");
-    selectedTasks.forEach(taskId => {
-        console.log(` - ${taskId}`);
-    });
-    console.log("=".repeat(80) + "\n");
+    console.log(JSON.stringify(result, null, 2));
 }
 
 main();
