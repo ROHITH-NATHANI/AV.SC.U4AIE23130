@@ -1,0 +1,78 @@
+{
+  "info": {
+    "_postman_id": "de740cad-3089-475b-927d-55ad6565d4cb",
+    "name": "My Collection",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "51442987",
+    "_collection_link": "https://go.postman.co/collection/51442987-de740cad-3089-475b-927d-55ad6565d4cb?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "http://20.207.122.201/evaluation-service/depots",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://20.207.122.201/evaluation-service/depots",
+          "protocol": "http",
+          "host": [
+            "20",
+            "207",
+            "122",
+            "201"
+          ],
+          "path": [
+            "evaluation-service",
+            "depots"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://20.207.122.201/evaluation-service/vehicles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://20.207.122.201/evaluation-service/vehicles",
+          "protocol": "http",
+          "host": [
+            "20",
+            "207",
+            "122",
+            "201"
+          ],
+          "path": [
+            "evaluation-service",
+            "vehicles"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://20.207.122.201/evaluation-service/notifications",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://20.207.122.201/evaluation-service/notifications",
+          "protocol": "http",
+          "host": [
+            "20",
+            "207",
+            "122",
+            "201"
+          ],
+          "path": [
+            "evaluation-service",
+            "notifications"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
